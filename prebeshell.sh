@@ -4,28 +4,33 @@ PS1="$(tput setaf 1)[$(tput sgr0)$(tput setaf 4)$USER@$(tput sgr0)$(tput setaf 2
 trap "" SIGINT SIGTSTP
 
 echo "Bienvenido a la prebeshell :D"
-echo "Para salir escriba 'salir'"
+echo "Para salir de la terminal escriba 'salir'"
 ciclo=0
 while [ $ciclo -eq 0 ]; do
-read -p "$PS1" cmd
+read -p "$PS1" cmd 
 case $cmd in
 	arbol)
-	. $PWD/arbol.sh
+	. $PWD/terminal/arbol.sh
 	;;
 	ayuda)
-	. $PWD/ayuda.sh
+	. $PWD/terminal/ayuda.sh
 	;;
 	buscar)
-	. $PWD/buscar.sh
+	. $PWD/terminal/buscar.sh
 	;;
 	creditos)
-	. $PWD/creditos.sh
+	. $PWD/terminal/creditos.sh
 	;;
 	infosis)
-	. $PWD/infosis.sh
+	. $PWD/terminal/infosis.sh
+	;;
+	ahorcado)
+	. $PWD/terminal/juegos/ahorcado.sh
 	;;
 	salir)
+	echo""
 	echo "Saliste de la prebeshell :("
+	echo""
 	ciclo=1
 	;;
 	*)

@@ -1,6 +1,6 @@
 #/bin/bash!
 
-helmi="¿Sobre que comando desea ayuda? "
+helmiplis="¿Sobre que comando desea ayuda? "
 echo "Para salir escriba 'salir'"
 echo "		Lista de comandos"
 echo "arbol"
@@ -8,25 +8,29 @@ echo "ayuda"
 echo "buscar"
 echo "creditos"
 echo "infosis"
+echo "ahorcado"
 ciclin=0
 while [ $ciclin -eq 0 ]; do
 echo ""
-read -p "$helmi" var
+read -p "$helmiplis" var
 case $var in
 	arbol)
-	. $PWD/aarbol.sh
+	. $PWD/scripts/aarbol.sh
 	;;
 	ayuda)
-	. $PWD/aayuda.sh
+	. $PWD/scripts/aayuda.sh
 	;;
 	buscar)
-	. $PWD/abuscar.sh
+	. $PWD/scripts/abuscar.sh
 	;;
 	creditos)
-	. $PWD/acreditos.sh
+	. $PWD/scripts/acreditos.sh
 	;;
 	infosis)
-	. $PWD/ainfosis.sh
+	. $PWD/scripts/ainfosis.sh
+	;;
+	ahorcado)
+	. $PWD/scripts/aahorcado.sh
 	;;
 	salir)
 	ciclin=1
