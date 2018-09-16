@@ -1,0 +1,4 @@
+Archivo para almacenar las contrasenias del login
+
+
+oracle

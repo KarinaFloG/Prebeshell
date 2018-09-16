@@ -1,0 +1,41 @@
+#SCRIPT PARA LA PREBEPLAYER CHIDORRI TEAM KARINA Y OCTAVIO
+
+#Verifica que se encuentre instalado mpg123 para usar la prebeplayer
+#Mientras no este instalado, pasamos a lo sig para instalarlo
+if [[ -z $(ls -d /usr/bin/mpg123) ]]; then
+	#Le avisa al usuario que se debe instalar mpg123
+	echo -e "\e[31m Para usar esta prebeplayer necesitas tener instalado  mpg123 \e[0m"
+	echo -ne "\e[32m ¿Deseas instalarlo? \e[0m"
+	echo -e "\e[32m [Y/N] *Y=YES* *N=NO* \e[0m"
+	echo -ne " $ "
+	read opt
+	case $opt in
+		Y)
+			sudo apt-get install mpg123
+			echo -e "\e[32m Descargando paquetes...[0m"
+			echo -e "\e[32m Instalando... [0m"
+			#AGREGAR TEMPORIZADOR
+			echo -e "\e[32m mpg123 instalado [0m"
+		;;
+		N)
+			echo -e "\e[32m No podras usar la prebeplayer :( Tú te lo pierdes \e[0m"
+			sleep 2
+			exit
+		;;
+		*)
+			echo -e "\e[31m  UPS ocurrio un error \e[0m"
+			sleep 1
+			clear
+		;;
+
+else
+
+	control=0
+
+	while []
+
+
+
+fi
+
+

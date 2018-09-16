@@ -1,0 +1,28 @@
+#SCRIPT PARA LA PREBEPLAYER CHIDORRI TEAM KARINA Y OCTAVIO
+
+
+while [[ -z $(ls -d /usr/bin/mpg123) ]]
+do
+	clear
+	echo -e "\e[1;31m\t Para esta hermosura de prebeplayer es necesarios tener instalado  mpg123 \e[0m"	#Sino, no se encontró y...
+	echo -ne "\e[1;32m\t ¿Deseas instalarlo? \e[0m"
+	echo -e "\e[1;32m\t [Y/N] *Y=YES* *N=NO* \e[0m"
+	echo -ne "\t >> "
+	read opt
+	case $opt in
+		y|Y)
+			sudo apt-get install mpg123							#... lo instala
+			echo -e "\e[1;32m\t INSTALACIÓN COMPLETADA \e[0m"
+		;;
+		n|N)
+			echo -e "\e[1;32m\t Tal vez para la próxima. Hasta luego... \e[0m"
+			sleep 2
+			exit
+		;;
+		*)
+			echo -e "\e[1;31m\t Opción no valida \e[0m"
+			sleep 1
+			clear
+		;;
+	esac
+done
