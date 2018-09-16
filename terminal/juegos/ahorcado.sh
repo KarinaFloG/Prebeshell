@@ -7,9 +7,11 @@ d4="/|\___||"
 d5="/ \___||"
 d6="______||"
 
+#Ciclo para la entrada y salida del juego
 ciclo3=0
 while [ $ciclo3 -eq 0 ]; do
-echo "Introduzca un numero del 1 al 5 para seleccionar su palabra: "
+#Selección de palabra
+echo -e "\e[0;32mIntroduzca un numero del 1 al 5 para seleccionar su palabra:\e[0m "
 read n
 case $n in
 	1)
@@ -33,7 +35,7 @@ case $n in
 	ciclo3=1
 	;;
 	*)
-	echo "Numero equivocado, vuelve a intentarlo"
+	echo "\e[0;31mNumero equivocado, vuelve a intentarlo\e[0m"
 	;;
 esac
 done
@@ -46,7 +48,7 @@ while [ $i -lt $tam ]; do
 done
 echo "$p"
 
-#para jugar
+#Para empezar el juego
 clear
 op=0
 letra=""
@@ -54,7 +56,7 @@ pos=0
 muerte=0
 while [ $op -ne 1 ]; do
 
-	#para dibujar
+	#Hacer el ahorcado con los errores
 	if [ $muerte -gt 0 ];then
 		echo $d1
 	else
@@ -93,10 +95,12 @@ while [ $op -ne 1 ]; do
 
 	if [ $muerte -eq 6 ];then
 		echo ""
-		echo "************************************ "
-		echo "************ Perdiste ************** "
-		echo "************************************ "
-		echo ""
+		echo -e "\e[1;3m************************************\e[0m "
+		echo -e "\e[1;3m********** Perdiste prro ***********\e[0m "
+		echo -e "\e[1;3m**********  Eres malo :v ***********\e[0m "
+		echo -e "\e[1;3m*********** Ponme 10 :( ************\e[0m "
+		echo -e "\e[1;3m************************************\e[0m "
+		echo -e ""
 		break
 	fi
 
@@ -114,15 +118,17 @@ gano=1
 
 if [ $gano -eq 1 ]; then
 	echo ""
-	echo "************************************"
-	echo "************* Ganaste **************"
-	echo "************************************"
+	echo -e "\e[1;3m************************************\e[0m"
+	echo -e "\e[1;3m************ \e[1;36mGanaste\e[0m \e[1;3m***************\e[0m"
+	echo -e "\e[1;3m***** \e[1;36mSeguramente eres becario\e[0m \e[1;3m*****\e[0m"
+	echo -e "\e[1;3m************ \e[1;36mPonme 10 :(\e[0m \e[1;3m***********\e[0m"
+	echo -e "\e[1;3m************************************\e[0m"
 	echo""
 	break
 fi
 
-
-echo "Ingrese la letra: "
+#Lectura de las letras
+echo -e "\e[1;32mIngrese la letra:\e[0m \e[0;32m "
 read letra
 clear
 pos=0
@@ -165,5 +171,5 @@ done
 p=$respaldo
 fi
 done
-echo "--------> $respaldo <--------"
+echo -e "\e[1;33m--------> $respaldo <--------\e[0m"
 done

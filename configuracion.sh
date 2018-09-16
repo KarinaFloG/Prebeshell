@@ -1,0 +1,21 @@
+#Archivo de configuracion para que no se pidan permisos de super usuaroios
+chmod 755 prebeshell.sh
+chmod 755 login.sh
+chmod 755 ./terminal/arbol.sh
+chmod 755 ./terminal/ayuda.sh
+chmod 755 ./terminal/buscar.sh
+chmod 755 ./terminal/creditos.sh
+chmod 755 ./terminal/infosis.sh
+chmod 755 ./terminal/ls.sh
+chmod 755 ./terminal/prebeplayer.sh
+chmod 755 ./terminal/juegos/ahorcado.sh
+chmod 755 ./terminal/juegos/sopa_prrona.sh
+chmod 755 ./scripts/aahorcado.sh
+chmod 755 ./scripts/aarbol.sh
+chmod 755 ./scripts/aayuda.sh
+chmod 755 ./scripts/abuscar.sh
+chmod 755 ./scripts/acreditos.sh
+chmod 755 ./scripts/ainfosis.sh
+chmod 755 ./scripts/als.sh
+chmod 755 ./scripts/aprebeplayer.sh
+chmod 755 ./scripts/asopa.sh
